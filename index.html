@@ -46,20 +46,49 @@
 			})  
 		});
     </script>
+    <title>이런등기메인</title>
 </head>
 
 <body>
     <div id="wrap">
-        <header>
+        <header class="idx_header">
             <nav>
                 <div class="logo">
-                  <h1><img src="img/erun_logo.png" alt="logo"></h1>
+                  <h1><img src="img/erun_logo.png" alt="logo" class="idx_logo"></h1>
                 </div>
-                <div class="button">
+                <div class="button button_pc">
                     <!-- <button>로그인</button> -->
                     <button>로그아웃</button>
                     <button>마이페이지</button>
                     <button class="new_comp">신규법인 견적 받기</button>
+                </div>
+                <!-- 모바일 - 햄버거 메뉴 -->
+                <div class="button button_nopc">
+                    <div class="modal-notice modalclick">
+                        <img src="img/all_menu.png" alt="all_menu">
+                    </div>
+      
+                    <div class="indexModal modal">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="modalNav">
+                                    <a href="index.html" class="modallogo">
+                                        <img src="img/erun_logo.png" alt="modallogo">
+                                    </a>
+                                    <div><img src="img/bg_apply_close.png" alt="close" class="xi-close btn-close"></div>
+                                </div>
+                                <div class="modalMenu">
+                                    <div>
+                                        <button class="mo_new_comp" onclick="location.href='index.html'">신규법인 견적받기</button>
+                                        <button>로그인</button>
+                                        <button>로그아웃</button>
+                                        <button>마이페이지</button>
+                                        <p>전화문의 1544.4306</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -75,19 +104,22 @@
                                 등기소 방문도, 서류도 필요없습니다.
                             </p>
                             <p>신청 5분 국내 최저가 178,000원에</p>
-                            <div class="bottomBtn">
+                            <div class="bottomBtn bottomBtn_pc">
                                 <button>신규법인 견적 받기</button>
                                 <button>상담 신청하기</button>
                             </div>
                         </div>
                         <div class="idx_img">
                             <img src="img/visual_phone.png" alt="모바일 이미지">
-
                             <div class="review">
                                 <img src="img/idx_review03.png" alt="mainImg" class="review01">
                                 <img src="img/idx_review02.png" alt="mainImg" class="review02">
                                 <img src="img/idx_review01.png" alt="mainImg" class="review03">
                             </div>
+                        </div>
+                        <div class="bottomBtn bottomBtn_nopc">
+                            <button>신규법인 견적 받기</button>
+                            <button>상담 신청하기</button>
                         </div>
                     </div>
                 </div>
@@ -99,7 +131,6 @@
                                 <div>
                                     <p>e-run 등기</p>
                                     <span class="xi-caret-down-circle-o"></span>
-                                    <!-- <img src="img/idx_tabIcon.png" alt="탭 아이콘"> -->
                                 </div>
                             </div>
                         </a>
@@ -109,7 +140,6 @@
                                 <div>
                                     <p>신규법인</p>
                                     <span class="xi-caret-down-circle-o"></span>
-                                    <!-- <img src="img/idx_tabIcon.png" alt="탭 아이콘"> -->
                                 </div>
                             </div>
                         </a>
@@ -119,7 +149,6 @@
                                 <div>
                                     <p>변경등기</p>
                                     <span class="xi-caret-down-circle-o"></span>
-                                    <!-- <img src="img/idx_tabIcon.png" alt="탭 아이콘"> -->
                                 </div>
                             </div>
                         </a>
@@ -129,7 +158,6 @@
                                 <div>
                                     <p>법인전환</p>
                                     <span class="xi-caret-down-circle-o"></span>
-                                    <!-- <img src="img/idx_tabIcon.png" alt="탭 아이콘"> -->
                                 </div>
                             </div>
                         </a>
@@ -145,7 +173,7 @@
                             오늘만 벌써
                             <span class="visitCount" id="visitCount">{{ count }}</span>명이 법인 설립 완료하셨습니다.
                         </h1>
-                        <ul class="idx_list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true"data-aos-easing="ease-out-cubic">
+                        <ul class="idx_list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" data-aos-easing="ease-out-cubic">
                             <li>
                                 <div>
                                     <p>국내 최저가 <br>178,000원 ~</p>
@@ -212,7 +240,7 @@
                                         </div>
                                         <div class="idx_right_list">
                                             <img src="img/step02.png" alt="탭 메뉴 아이콘">
-                                            <span>자본금<span>(초기 투자 비용)</span></span>
+                                            <span>자본금 <span>(초기 투자 비용)</span></span>
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-once="true">
@@ -224,7 +252,7 @@
                                         </div>
                                         <div class="idx_right_list">
                                             <img src="img/step03.png" alt="탭 메뉴 아이콘">
-                                            <span>주주/임원/감사 정하기<span>(투자자/책임자/관리자)</span></span>
+                                            <span>주주/임원/감사 정하기 <span>(투자자/책임자/관리자)</span></span>
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" data-aos-once="true">
@@ -243,6 +271,7 @@
                                         <div class="idx_left_list">
                                             <div>
                                                 <span>STEP5</span>
+                                                <span class="line"></span>
                                             </div>
                                         </div>
                                         <div class="idx_right_list">
@@ -410,6 +439,45 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="idx_imgWrap">
+                                <div class="idx_imgWrap_div">
+                                    <p>회사 주소 변경</p>
+                                    <img src="img/service01.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>임원 변경</p>
+                                    <img src="img/service02.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>사업목적 변경</p>
+                                    <img src="img/service03.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>대표이사 변경</p>
+                                    <img src="img/service04.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>유상증자</p>
+                                    <img src="img/service05.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>대표이사 주소 변경</p>
+                                    <img src="img/service06.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>상호 변경</p>
+                                    <img src="img/service07.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>지점 추가 설치</p>
+                                    <img src="img/service08.png" alt="변경등기 이미지">
+                                </div>
+                                <div class="idx_imgWrap_div">
+                                    <p>기타 변경</p>
+                                    <img src="img/service09.png" alt="변경등기 이미지">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="idx_tab03_con02">
@@ -420,7 +488,7 @@
                                 <p>
                                     법인 설립 후 끝이라고 생각하는 대표님들이 많습니다. <br>
                                     변경등기가 중요한 이유, 이런등기에서 알려드립니다. <br>
-                                    설립부터 변경이 필요할 때마다, <br>저희가 옆에서 도와드리겠습니다.
+                                    설립부터 변경이 필요할 때마다, <br><span>저희가 옆에서 도와드리겠습니다.</span>
                                 </p>
                             </div>
                             <ul class="idx_tabImg">
@@ -442,7 +510,7 @@
                                             <span>법인설립 후 변경사항이 생겼을 때 </span>
                                             <p>
                                                 정해진 기간 내에
-                                                변경등기 필수!
+                                                <span>변경등기 필수!</span>
                                             </p>
                                         </div>
                                     </div>
@@ -483,7 +551,7 @@
                             <li>
                                 <p>
                                     공개입찰이 필요하거나 <br>
-                                    대외 투자가 필요하신
+                                    대외 투자가 필요하신 대표님
                                 </p>
                                 <div>
                                     <p>
@@ -504,7 +572,7 @@
                                 </p>
                                 <div>
                                     <p>
-                                        개인기업의 최고 소득세율은 40%인 반면, <br>
+                                        개인기업의 최고 소득세율은<span> 40%인 반면,</span> <br>
                                         법인 소득자는 10~22%의 낮은 소득세율
                                         적용이 되어 유리합니다.
                                     </p>
@@ -517,14 +585,25 @@
                         <p>변경등기 상담 신청을 통해 접수하시면 상담을 해드립니다.</p>
                     </div>
                     <div class="idx_tab04_con02">
-                        <div class="idx_tab04_con02_bg"></div>
                         <div class="idx_tab04_con02_tx">
                             <h1>상담 신청하기</h1>
                             <div class="idx_input">
-                                <input type="text" placeholder="이름">
-                                <input type="email" placeholder="이메일">
-                                <input type="text" placeholder="지역">
-                                <input type="tel" placeholder="휴대폰번호">
+                                <div>
+                                    <img src="img/apply_icon01.png" alt="" class="idx_footer_icon">
+                                    <input type="text" placeholder="이름">
+                                </div>
+                                <div>
+                                    <img src="img/apply_icon02.png" alt="" class="idx_footer_icon">
+                                    <input type="email" placeholder="이메일">
+                                </div>
+                                <div>
+                                    <img src="img/apply_icon03.png" alt="" class="idx_footer_icon">
+                                    <input type="text" placeholder="휴대폰번호">
+                                </div>
+                                <div>
+                                    <img src="img/apply_icon04.png" alt="" class="idx_footer_icon">
+                                    <input type="tel" placeholder="지역">
+                                </div>
                             </div>
                             <ul class="idx_radio">
                                 <li class="radio_01">
@@ -562,7 +641,22 @@
                                     </div>
                                 </li>
                             </ul>
-                            <button>상담 신청하기</button>
+                            <button class="submitBtn">상담 신청하기</button>
+                            <!-- 팝업창 컨텐츠 -->
+                            <div class="bgcolor bottomBg">
+                                <div class="popUp botomPp">
+                                    <div class="textPop">
+                                        <div class="contentGr">
+                                            <div class="detail">
+                                                <img src="img/apply_pop.png" alt="팝업이미지">
+                                                <h1>신청이 완료 되었습니다.<br> 감사합니다.</h1>
+                                                <p>빠른 시일 내에 <br>담당자가 연락 드리겠습니다.</p>
+                                                <img src="img/bg_apply_close.png" alt="닫기" class="idx_pop_close">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -570,7 +664,7 @@
             <footer>
                 <div class="idx_footerinner">
                     <div>
-                        <a href="index.html"><img src="img/erun_ftlogo.png" alt="logo" title="logo"></a>
+                        <a href="index.html"><img src="img/erun_ftlogo.png" alt="logo" title="logo" class="idx_logo"></a>
                     </div>
                     <div>
                         <p>서울특별시 서초구 서초중앙로 24길 27, 321, 322호 (서초동 지파이브 센트럴 프라자)</p>
