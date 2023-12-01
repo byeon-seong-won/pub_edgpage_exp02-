@@ -3,7 +3,15 @@ class StickyNavigation {
 	constructor() {
 		this.currentId = null;
 		this.currentTab = null;
-		this.tabContainerHeight = 70;
+		var scwidth = $( window ).width();
+
+		if(scwidth > 1024) {
+			this.tabContainerHeight = 70;
+		} else {
+			this.tabContainerHeight = 60;
+		}
+
+		
 		let self = this;
 		$('.et-hero-tab').click(function() { 
 			self.onTabClick(event, $(this)); 
@@ -31,11 +39,14 @@ class StickyNavigation {
 	
 	checkTabContainerPosition() {
 		let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+
 		if($(window).scrollTop() > offset) {
+			
 			$('#wrap header').addClass('up');
 			$('.et-hero-tabs-container-wrap').addClass('et-hero-tabs-container-wrap--top');
 		} 
 		else {
+			
 			$('#wrap header').removeClass('up');
 			$('.et-hero-tabs-container-wrap').removeClass('et-hero-tabs-container-wrap--top');
 		}
@@ -52,7 +63,6 @@ class StickyNavigation {
 			if($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
 				newCurrentId = id;
 				newCurrentTab = $(this);
-				// console.log("newCurrentId" + newCurrentId)
 			}
 		});
 		if(this.currentId != newCurrentId || this.currentId === null) {
@@ -63,20 +73,8 @@ class StickyNavigation {
 	}
 	
 	setSliderCss(newCurrentId) {
-		let width = 0;
-		let left = 0;
-		let height = 0;
-		// if(this.currentTab) {
-		// 	width = this.currentTab.css('width');
-		// 	height = this.currentTab.css('height');
-		// 	left = this.currentTab.offset().left;
-		// 	console.log(left)
-		// }
-		// $('.et-hero-tab-slider').css({'width': width, 'height':height , "z-index" : "-1"});
-		// $('.et-hero-tab-slider').css('left', left);
 
 		if(this.currentTab) {
-			// console.log("여기탔음", "newCurrentId" + newCurrentId)
 			let idx = newCurrentId;
 
 			if(idx == '#tab01') {
@@ -123,3 +121,55 @@ $('.idx_tab04_con02_tx label').click(function(){
 
 
 
+
+
+
+
+/* 햄버거 메뉴*/
+$(".modalclick").click(function() {
+    $(".modal").addClass("active");
+	$("body").css({"position" : "fixed", "overflow" :"hidden"})
+})
+$(".maincontent ul li a").click(function() {
+  $(".modal").removeClass("active");
+})
+$(".btn-close").click(function() {
+  $(".modal").removeClass("active");
+  $("body").css({"position" : "static", "overflow" :"visible"})
+
+})
+$(".modallogo").click(function() {
+  $(".modal").removeClass("active");
+})
+ 
+
+
+
+/* 하단 상담신청하기 클릭 팝업 */
+$(".submitBtn").click(function() {
+	$(".bottomBg").css({"display":"block"})
+	$(".botomPp").css({"display":"block"})
+	// $("body").css({"position" : "fixed", "overflow" :"hidden"})
+})
+
+// (닫기)
+$(".idx_pop_close").click(function() {
+	$(".bottomBg").css({"display":"none"})
+	$(".botomPp").css({"display":"none"})
+	// $("body").css({"position" : "static", "overflow" :"visible"})
+})
+
+
+ // logo click
+ $('.idx_logo').click(function() {
+	$(window).scrollTop(0);
+});
+
+
+
+
+
+// 브라우저 resize overflow 처리
+// window.addEventListener("resize", function() {
+// 	$("body").css({"position" : "static", "overflow" :"visible"})
+// })
